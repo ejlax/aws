@@ -205,23 +205,33 @@ if (isset($_POST['email']) and isset($_POST['password'])) {
 	$pwd = sha1($_POST['password'] . $pepper);
 	$sql = "SELECT COUNT(id) FROM users WHERE email='$user' AND password='$pwd'";
 	$sql1 = "SELECT salt FROM users WHERE email='$user' AND password='$pwd'";
-	$result = mysql_query($sql, $link);
-	$result2 = mysql_query($sql1, $link);
-	list($salt1) = mysql_fetch_array($result2);
-	list($count) = mysql_fetch_array($result);
-	if ($count > 0) {
-		//setcookie('user',$user,strtotime('+1 day'));
-		//setcookie('user', $user);
-		$_SESSION['salt'] = $salt1;
-		$_SESSION['pwd'] = $pwd;
-		$_SESSION['user'] = $user;
-		$time = time();
-		$_SESSION['loginTime'] = $time;
-		$hash = sha1($user.$time.$salt1);
-		$_SESSION['hash'] = $hash;
-		//setcookie('hash', $hash);
-		//echo $_COOKIE['user'];
-		header('location:auth_user.php');
+	$sql2 = "SELECT email,password FROM users WHERE email='$user'";
+	$result= mysql_query($sql2,$link);
+	$email = mysql_fetch_array($result);
+	//echo $sql2."<br>";
+	//echo $email[0]; 
+	if($email[0] == $user){ 
+		$result = mysql_query($sql, $link);
+		$result2 = mysql_query($sql1, $link);
+		list($salt1) = mysql_fetch_array($result2);
+		list($count) = mysql_fetch_array($result);
+		if ($count > 0) {
+			//setcookie('user',$user,strtotime('+1 day'));
+			//setcookie('user', $user);
+			$_SESSION['salt'] = $salt1;
+			$_SESSION['pwd'] = $pwd;
+			$_SESSION['user'] = $user;
+			$time = time();
+			$_SESSION['loginTime'] = $time;
+			$hash = sha1($user.$time.$salt1);
+			$_SESSION['hash'] = $hash;
+			//setcookie('hash', $hash);
+			//echo $_COOKIE['user'];
+			header('location:auth_user.php');
+		}
+		echo "Bad Username of Password.";
+	}else{
+		echo "Bad Username or Password.";
 	}
 }
 ob_flush();

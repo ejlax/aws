@@ -5,6 +5,7 @@ if(isset($_POST['user']) and isset($_POST['pwd']) and isset($_POST['gen'])){
 	$user=$_POST['user'];
 	$pwd=sha1($_POST['pwd'].$pepper);
 	$gen=$_POST['gen'];
+	//$sql="SELECT "
 	$sql="INSERT INTO users(name,pwd,gender,salt) VALUES('$user','$pwd',$gen,'$salt')";
 	echo $sql."<br>";
 	mysql_query($sql,$link);
@@ -12,10 +13,23 @@ if(isset($_POST['user']) and isset($_POST['pwd']) and isset($_POST['gen'])){
 }
 ?>
 <form method='post' action=''>
-User Name: <input type='text' name='user'><br>
-Password: <input type='password' name='pwd'><br>
-Gender:<br>
-Male <input type='radio' name='gen' value='0'> 
-Female<input type='radio' name='gen' value='1'><br>
-<input type='submit' value='Submit'>
+	Register your Account:
+	<br>
+	User Name:
+	<input type='text' name='user'>
+	<br>
+	Password:
+	<input type='password' name='pwd'>
+	<br>
+	Email:
+	<input type="text" value="email">
+	CostCenter:
+	<select name="costCenter">
+		<option value="69333">Implementation Services</option>
+		<option value="69101">Cloud Operations</option> 
+		<option value="69501">SIS Operations</option>
+		<option value="69555">Quality Assurance</option>
+		<option value="69599">Development</option>
+	</select>
+	<input type='submit' value='Submit'>
 </form>

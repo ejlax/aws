@@ -1,18 +1,26 @@
 <?php
+session_start();
+$auth = $_SESSION['salt'];
+$pwd = $_SESSION['pwd'];
 include_once ('salt.php');
 include_once ('connect.php');
-$sql = "SELECT salt FROM users WHERE name='$user' AND pwd='$pwd'";
+if(isset($_SESSION['user']) and isset($_SESSION['loginTime']) and isset($_SESSION['hash'])) {
+	$user = $_SESSION['user'];
+	$time = $_SESSION['loginTime'];
+	$hash = $_SESSION['hash'];
+	//echo $hash."<br>";
+	//echo $auth."<br>";
+	$sql = "SELECT firstName,lastName FROM users WHERE email='$user' AND password='$pwd'";
 $result = mysql_query($sql, $link);
-if (isset($_COOKIE['user']) and isset($_COOKIE['loginTime']) and isset($_COOKIE['hash'])) {
-	$user = $_COOKIE['user'];
-	$time = $_COOKIE['loginTime'];
-	$hash = $_COOKIE['hash'];
-	$hashCalculated = sha1($user . $time . $result);
+$name = mysql_fetch_array($result);
+//echo $sql."<br>";
+	$hashCalculated = sha1($user.$time.$auth);
+	//echo $hashCalculated."<br>";
 	if ($hash != $hashCalculated) {
-		header('location:login.php');
+		//header('location:login_form.php');
+		echo "check the log files, the user was not authenticated!";
+	}else{
+		echo "Welcome " . $name[0]."&nbsp".$name[1]. "!<br>";
 	}
-} else {
-	header('location:login.php');
-}
-echo "Welcome " . $user . "!<br>";
+} 
 ?>

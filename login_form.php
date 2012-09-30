@@ -229,7 +229,7 @@ if (isset($_POST['email']) and isset($_POST['password'])) {
 			//echo $_COOKIE['user'];
 			header('location:auth_user.php');
 		}
-		echo "Bad Username of Password.";
+		echo "Bad Username or Password.";
 	}else{
 		echo "Bad Username or Password.";
 	}

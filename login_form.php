@@ -1,3 +1,4 @@
+<?php ob_start();?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
@@ -223,4 +224,5 @@ if (isset($_POST['email']) and isset($_POST['password'])) {
 		header('location:auth_user.php');
 	}
 }
+ob_flush();
 ?>

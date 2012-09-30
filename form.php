@@ -227,7 +227,7 @@
 	</body>
 </html>
 <?php
-//ssession_start();
+session_start();
 include_once('connect.php');
 include_once('salt.php');
 if(isset($_POST['firstName']) and isset($_POST['lastName']) and isset ($_POST['email']) and isset($_POST['employeeId']) and isset($_POST['password']) and isset($_POST['costCenter'])){
@@ -240,8 +240,8 @@ if(isset($_POST['firstName']) and isset($_POST['lastName']) and isset ($_POST['e
 	$sql="INSERT INTO users(firstName,lastName,email,employeeId,password,salt) VALUES('$fname','$lname','$email','$employeeId','$pwd','$salt')";
 	//echo $sql."<br>";
 	mysql_query($sql,$link);
-	//$_SESSION['empId'] = $employeeId;
-	//$_SESSION['cCenter'] = $cCenter;
+	$_SESSION['empId'] = $employeeId;
+	$_SESSION['cCenter'] = $cCenter;
 	header('location:confirm.php');//goto new location
 }
 ob_flush();

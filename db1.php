@@ -1,8 +1,10 @@
 <?php
+ob_start();
 session_start();
 include_once('connect.php');
 $employeeId = $_SESSION['empId'];
 $cCenter = $_SESSION['cCenter'];
+//echo $employeeId;
 $sql = "SELECT id FROM users WHERE employeeId = '$employeeId'";
 $result = mysql_query($sql,$link);
 list($empId) = mysql_fetch_array($result);
@@ -19,5 +21,5 @@ mysql_query($sql,$link);
 //echo $employeeId."<br>";
 //echo $cCenter;
 header('location:login_form.php');
-
+ob_flush();
 ?>

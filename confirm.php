@@ -1,5 +1,5 @@
-	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-	<html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
 	<head>
 		<title>Registration Form - created by phpFormGenerator</title>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8"><link href="style.css" rel="stylesheet" type="text/css">
@@ -197,5 +197,6 @@
 	</body>
 	</html>
 <?php
-session_start();
+$_SESSION['empId'];
+$_SESSION['cCenter'];
 ?>

@@ -24,3 +24,5 @@ $name = mysql_fetch_array($result);
 	}
 } 
 ?>
+
+<a href="logout.php">Log Out</a>

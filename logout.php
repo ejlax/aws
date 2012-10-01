@@ -1,0 +1,17 @@
+<?php
+/**
+* The logout file
+* destroys the session
+* expires the cookie
+* redirects to login.php
+*/
+session_start();
+session_destroy();
+unset($_SESSION['salt']);
+unset($_SESSION['pwd']);
+unset($_SESSION['user']);
+unset($_SESSION['loginTime']);
+unset($_SESSION['hash']);
+session_destroy();
+header("location: login.php");
+?>

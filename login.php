@@ -140,7 +140,7 @@
 	<body onLoad="collapseAll()">
 		<div id="mainForm">
 			<div id="formHeader">
-				<h2 class="formInfo">login</h2>
+				<h2 class="formInfo">Pearson AWS Instance Portal Login</h2>
 				<p class="formInfo"></p>
 			</div>
 			<BR/>
@@ -149,7 +149,7 @@
 				<ul class=mainForm id="mainForm_1">
 					<li class="mainForm" id="email">
 						<label class="formFieldQuestion">Email Address&nbsp;*&nbsp;<a class=info href=#><img src=imgs/tip_small.png border=0><span class=infobox>The email address you registered with.</span></a></label>
-						<input class=mainForm type=text name=email id=email size='20' value='employeename@pearson.com'>
+						<input class=mainForm type=text name=email id=email size='20' value=''>
 					</li>
 					<li class="mainForm" id="password">
 						<label class="formFieldQuestion">Password&nbsp;*</label>
@@ -182,7 +182,7 @@
 
 					<!-- next page buttons -->
 					<li class="mainForm">
-						<input id="saveForm" class="mainForm" type="submit" value="Submit" />
+						<input id="saveForm" class="mainForm" type="submit" value="Log In" />
 					</li>
 			</form>
 			<!-- end of form -->
@@ -236,3 +236,5 @@ if (isset($_POST['email']) and isset($_POST['password'])) {
 }
 ob_flush();
 ?>
+
+<a href="form.php">Create Account</a>

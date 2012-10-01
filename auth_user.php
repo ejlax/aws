@@ -2,7 +2,7 @@
 session_start();
 $auth = $_SESSION['salt'];
 $pwd = $_SESSION['pwd'];
-include_once ('salt.php');
+include_once ('login/salt.php');
 include_once ('connect.php');
 if(isset($_SESSION['user']) and isset($_SESSION['loginTime']) and isset($_SESSION['hash'])) {
 	$user = $_SESSION['user'];

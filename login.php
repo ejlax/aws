@@ -199,7 +199,7 @@
 <?php
 session_start();
 include_once ('connect.php');
-include_once ('salt.php');
+include_once ('login/salt.php');
 if (isset($_POST['email']) and isset($_POST['password'])) {
 	$user = $_POST['email'];
 	$pwd = sha1($_POST['password'] . $pepper);
@@ -229,9 +229,9 @@ if (isset($_POST['email']) and isset($_POST['password'])) {
 			//echo $_COOKIE['user'];
 			header('location:auth_user.php');
 		}
-		echo "Bad Username or Password.";
+		echo "Bad Username or Password. <a href='reset_password.php'>Reset Password?</a><br>";
 	}else{
-		echo "Bad Username or Password.";
+		echo "Bad Username or Password. <a href='reset_password.php'>Reset Password?</a><br>";
 	}
 }
 ob_flush();

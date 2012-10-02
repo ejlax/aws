@@ -9,7 +9,7 @@ ob_start();
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<!-- calendar stuff -->
-		<link rel="stylesheet" type="text/css" href="calendar/calendar-blue2.css" />
+		<!--  <link rel="stylesheet" type="text/css" href="calendar/calendar-blue2.css" />  -->
 		<script type="text/javascript" src="calendar/calendar.js"></script>
 		<script type="text/javascript" src="calendar/calendar-en.js"></script>
 		<script type="text/javascript" src="calendar/calendar-setup.js"></script>

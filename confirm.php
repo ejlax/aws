@@ -197,6 +197,7 @@
 	</body>
 	</html>
 <?php
+session_start();
 $_SESSION['empId'];
 $_SESSION['cCenter'];
 ?>

@@ -6,12 +6,14 @@
 * redirects to login.php
 */
 session_start();
+$_SESSION = array();
+//unset($_SESSION['salt']);
+//unset($_SESSION['pwd']);
+//unset($_SESSION['user']);
+//unset($_SESSION['loginTime']);
+//unset($_SESSION['hash']);
+//unset($_SESSION['LAST_ACTIVITY']);
+session_unset();
 session_destroy();
-unset($_SESSION['salt']);
-unset($_SESSION['pwd']);
-unset($_SESSION['user']);
-unset($_SESSION['loginTime']);
-unset($_SESSION['hash']);
-session_destroy();
-header("location: login.php");
+//header("location: login.php");
 ?>

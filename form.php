@@ -199,7 +199,7 @@
 								retVal = false;
 							if (validateField('lastName', 'fieldBox_2', 'text', 1) == false)
 								retVal = false;
-							if (validateField('email', 'fieldBox_3', 'text', 1) == false)
+							if (validateField('email', 'fieldBox_3', 'email', 1) == false)
 								retVal = false;
 							if (validateField('employeeId', 'fieldBox_4', 'text', 1) == false)
 								retVal = false;

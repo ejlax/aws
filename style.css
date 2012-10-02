@@ -35,9 +35,17 @@ ul.mainForm
 
 li.mainForm
 {
-	padding-bottom: 10px;
+	padding-bottom: 15px;
 	vertical-align: middle;
 	color:#fffff
+}
+
+input.mainForm
+{
+	border: 1px
+	border-style:solid;
+	border-radius: 10px;
+	
 }
 
 
@@ -145,6 +153,10 @@ p.formInfo
 	width: 100%;
 	background-color: #dddddd;
 	margin:0 0 0 0;
+	border: 0px
+	border-style: solid;
+	border-radius: 10px;
+
 
 }
 
@@ -167,6 +179,9 @@ label.formFieldOption
 	margin:-19px 0 0 25px;
 	padding:4px 0 5px 0;
 	width:90%;
+	border: 0px
+	border-radius: 10px;
+	border-style: solid;
 }
 
 
@@ -178,6 +193,10 @@ input.formFieldStyle
 	margin:8px 0 0 3px;
 	width:13px;
 	height:13px;
+	border: 0px
+	border-radius: 10px;
+	border-style: solid;
+	
 }
 
 

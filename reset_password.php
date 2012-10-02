@@ -140,6 +140,13 @@ ob_start();
 		</SCRIPT>
 		<!-- end validate -->
 	</head>
+	<h3>
+	<div id="top"> 
+		<a class="menu_top" href="form.php">Create Account</a> / 
+		<a class="menu_top" href="login.php">Login</a> 
+		<!--  <a class="menu_top" href="reset_password.php">Reset Password</a> / -->
+	</div>
+	</h3>
 	<body onLoad="collapseAll()">
 		<div id="mainForm">
 			<div id="formHeader">
@@ -195,6 +202,7 @@ ob_start();
 			<!-- close the display stuff for this page -->
 			</ul>
 		</div>
+				<script type="text/javascript" src="js/nav.js"></script>
 	</body>
 </html>
 <?php
@@ -228,6 +236,8 @@ if (isset($_POST['new_password']) and isset($_POST['verify_password']) and isset
 	} 
 }
 ob_flush();
+$time = getdate();
+echo $time[weekday].",&nbsp".$time[month]."&nbsp".$time[mday].",&nbsp".$time[year]."<br>";
 ?>
 
-<a href="form.php">Create Account</a>
+

@@ -155,30 +155,31 @@
 			</div>
 			<BR/>
 			<!-- begin form -->
+	
 			<form name="form" method=post enctype=multipart/form-data action='' onSubmit="return validatePage1();">
 				<ul class=mainForm id="mainForm_1">
 					<li class="mainForm" id="fieldBox_1">
 						<label class="formFieldQuestion">First Name&nbsp;*</label>
-						<input class=mainForm type=text name=firstName id=firstName size='20' value=''>
+						<input class=mainForm type=text name=firstName id=firstName size='20' value='' placeholder="First Name" autofocus required>
 					</li>
 					<li class="mainForm" id="fieldBox_2">
 						<label class="formFieldQuestion">Last Name&nbsp;*</label>
-						<input class=mainForm type=text name=lastName id=lastName size='20' value=''>
+						<input class=mainForm type=text name=lastName id=lastName size='20' value='' placeholder="Last Name" required>
 					</li>
 					<li class="mainForm" id="fieldBox_3">
 						<label class="formFieldQuestion">Your Email Address:&nbsp;*</label>
-						<input class=mainForm type=text name=email id=email size='20' value=''>
+						<input class=mainForm type=email name=email id=email size='20' value='' placeholder="Email" required>
 					</li>
 					<li class="mainForm" id="fieldBox_4">
 						<label class="formFieldQuestion">Your Employee ID:&nbsp;*</label>
-						<input class=mainForm type=text name=employeeId id=employeeId size='20' value=''>
+						<input class=mainForm type=text name=employeeId id=employeeId size='20' value='' placeholder="Employee Id" required>
 					</li>
 					<li class="mainForm" id="fieldBox_5">
 						<label class="formFieldQuestion">Password&nbsp;*</label>
-						<input class=mainForm type=password name=password id=password size='20' value=''>
+						<input class=mainForm type=password name=password id=password size='20' value='' placeholder="Password" required>
 					</li>
 					<li class="mainForm" id="fieldBox_6">
-						<label class="formFieldQuestion">Cost Center&nbsp;*&nbsp;<a class=info href=#><img src=imgs/tip_small.png border=0><span class=infobox>Please select your cost center for billing and other accounting purposes</span></a></label>
+						<label class="formFieldQuestion">Cost Center&nbsp;*&nbsp;<a class=info href=#><img src=imgs/tip_small1.png width=15 height=15 border=0><span class=infobox>Please select your cost center for billing and other accounting purposes</span></a></label>
 						<select class=mainForm name=costCenter id=costCenter>
 							<option value=''></option>
 							<option value="69333">Implementation Services</option>
@@ -220,6 +221,7 @@
 						<input id="saveForm" class="mainForm" type="submit" value="Submit" />
 					</li>
 			</form>
+		
 			<!-- end of form -->
 			<!-- close the display stuff for this page -->
 			</ul>

@@ -5,7 +5,6 @@ body
 	text-align: center;
 	margin: 50px;		/* shift whole page down by 25 pixels */
 	background-color: #FFFFFF;
-	vertical-align: middle;
 }
 
 
@@ -15,20 +14,21 @@ body
 	border: 0px;
 	border-radius:25px;
 	border-style: solid;
-	margin: 0 auto;
 	text-align: left;
+	margin: 0 auto;
 	width: 500px;
 	background-color: #000066;
-	vertical-align: middle;
-	box-shadow: 0px 10px 10px 0px #CCCCCC;
+	/*box-shadow: 0px 10px 5px 0px #CCCCCC;*/
 }
+	
+
 
 ul.mainForm
 {
 	list-style-type: none;
 	font-family: Tahoma, Arial, Verdana, sans-serif;
 	font-size:15px;	
-	color:#000066
+	color:#000066;
 	margin: 0 auto;
 	vertical-align: middle;
 }
@@ -42,7 +42,7 @@ li.mainForm
 
 input.mainForm
 {
-	border: 1px
+	border: 1px;
 	border-style:solid;
 	border-radius: 10px;
 	
@@ -82,7 +82,7 @@ select.mainFormError
 #formHeader
 {
 	position: relative;
-	border: 0px
+	border: 2px;
 	border-radius:25px;
 	/*border-style:solid;*/
 	width: 70%;
@@ -145,6 +145,7 @@ p.formInfo
 	left:20px;
 	top:0px;
 	color: #DDDDDD;
+	padding: 10px;
 }
 
 #formFields
@@ -153,9 +154,11 @@ p.formInfo
 	width: 100%;
 	background-color: #dddddd;
 	margin:0 0 0 0;
-	border: 0px
+	border: 0px;
 	border-style: solid;
 	border-radius: 10px;
+	height: 25px;
+	padding: 20px;
 
 
 }
@@ -169,6 +172,7 @@ label.formFieldQuestion
 	font-size:95%;
 	font-weight:bold;
 	color:#DDDDDD;
+	height: 20px;
 }
 
 label.formFieldOption
@@ -179,9 +183,10 @@ label.formFieldOption
 	margin:-19px 0 0 25px;
 	padding:4px 0 5px 0;
 	width:90%;
-	border: 0px
+	border: 0px;
 	border-radius: 10px;
 	border-style: solid;
+	padding: 10px;
 }
 
 
@@ -189,11 +194,11 @@ label.formFieldOption
 input.formFieldStyle
 {
 	display:block;
-	line-height:1.4em;
+	line-height:10px;
 	margin:8px 0 0 3px;
-	width:13px;
-	height:13px;
-	border: 0px
+	width:20px;
+	height:20px;
+	border: 0px;
 	border-radius: 10px;
 	border-style: solid;
 	
@@ -221,7 +226,7 @@ a.info:hover .infobox {
 	font-weight: normal; 
 	display:block; 
 	position:absolute; 
-	top:20px;;
+	top:20px;
 	left:25px;
 	width:205px; 
 	height:70px; 

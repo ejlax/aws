@@ -5,12 +5,6 @@
 		<title>AWS Portal Login by Pearson</title>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<link href="style.css" rel="stylesheet" type="text/css">
-		<!-- calendar stuff -->
-		<link rel="stylesheet" type="text/css" href="calendar/calendar-blue2.css" />
-		<script type="text/javascript" src="calendar/calendar.js"></script>
-		<script type="text/javascript" src="calendar/calendar-en.js"></script>
-		<script type="text/javascript" src="calendar/calendar-setup.js"></script>
-		<!-- END calendar stuff -->
 		<!-- expand/collapse function -->
 		<SCRIPT type=text/javascript>
 			<!--
@@ -157,11 +151,11 @@
 					<ul class=mainForm id="mainForm_1">
 					<li class="mainForm" id="fieldBox_1">
 						<label class="formFieldQuestion">Email Address&nbsp;*&nbsp;<a class=info href=#><img src=imgs/tip_small.png border=0><span class=infobox>The email address you registered with.</span></a></label>
-						<input class=mainForm type=text name=email id=email size='20' value=''>
+						<input class=mainForm type=text name=email id=email size='20' value='' placeholder="Email" autofocus required>
 					</li>
 					<li class="mainForm" id="fieldBox_2">
 						<label class="formFieldQuestion">Password&nbsp;*</label>
-						<input class=mainForm type=password name=password id=password size='20' value=''>
+						<input class=mainForm type=password name=password id=password size='20' value='' placeholder="Password" required>
 					</li>
 					<!-- end of this page -->
 
